@@ -1,6 +1,8 @@
 colorscheme desert
 
 :let mapleader=","
+set guifont=Monospace\ 12 
+
 "pathogen
 execute pathogen#infect()
 syntax on
@@ -23,4 +25,20 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jsxhint']
+
+"vim session
+let g:session_directory = '~/.vim-sessions'
+let g:session_autoload = 'no'
+
+"buffer switching
+map <C-TAB> :bnext<CR>
+map <C-S-TAB> :bprev<CR>
+
+"cntrl-s for saving
+map <C-s> :wa<CR>
+
+"for gf
+set suffixesadd+=.js,.jsx
+set wildignore+=**/target**
+set wildignore+=**/ztest**
 
