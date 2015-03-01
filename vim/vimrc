@@ -42,3 +42,24 @@ set suffixesadd+=.js,.jsx
 set wildignore+=**/target**
 set wildignore+=**/ztest**
 
+"vim project
+set rtp+=~/.vim/bundle/vim-project/
+let g:project_use_nerdtree = 1
+" custom starting path
+call project#rc("~/git")
+
+Project "cjo"
+Callback "cjo", "SetPathCjo"
+Project "speedyg"
+"Callback "speedyg", "SetPathSpeedyg"
+Project "simon"
+Project "jaws"
+
+function! SetPathSpeedyg(...) abort
+  setlocal path=~/git/speedyg/**
+endfunction
+
+function! SetPathCjo(...) abort
+  setlocal path=~/git/cjo/**
+endfunction
+
