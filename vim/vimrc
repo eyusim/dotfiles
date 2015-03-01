@@ -5,12 +5,22 @@ set guifont=Monospace\ 12
 
 "pathogen
 execute pathogen#infect()
+
 syntax on
 filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set number
+
+"undo
+set undofile
+set undodir=~/.vimundo/
 
 " cntrl.p
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_max_files = 0
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -43,23 +53,9 @@ set wildignore+=**/target**
 set wildignore+=**/ztest**
 
 "vim project
-set rtp+=~/.vim/bundle/vim-project/
 let g:project_use_nerdtree = 1
-" custom starting path
+set rtp+=~/.vim/bundle/vim-project/
 call project#rc("~/git")
 
-Project "cjo"
-Callback "cjo", "SetPathCjo"
-Project "speedyg"
-"Callback "speedyg", "SetPathSpeedyg"
-Project "simon"
-Project "jaws"
-
-function! SetPathSpeedyg(...) abort
-  setlocal path=~/git/speedyg/**
-endfunction
-
-function! SetPathCjo(...) abort
-  setlocal path=~/git/cjo/**
-endfunction
+source ~/.vimproject.vim
 
