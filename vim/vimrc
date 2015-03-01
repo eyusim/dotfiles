@@ -1,2 +1,12 @@
 colorscheme desert
 
+:let mapleader=","
+"pathogen
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+" cntrl.p
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
