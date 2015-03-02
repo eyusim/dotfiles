@@ -13,6 +13,10 @@ set shiftwidth=4
 set expandtab
 set number
 
+"lost focus autosave
+:au FocusLost * silent! wa
+:set autowriteall
+
 "undo
 set undofile
 set undodir=~/.vimundo/
@@ -35,6 +39,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_java_checkers=['']
 
 "vim session
 let g:session_directory = '~/.vim-sessions'
