@@ -2,6 +2,7 @@ colorscheme desert
 
 :let mapleader=","
 set guifont=Monospace\ 12 
+set directory=~/tmp,/var/tmp,/tmp
 
 "pathogen
 execute pathogen#infect()
@@ -50,7 +51,7 @@ map <C-TAB> :bnext<CR>
 map <C-S-TAB> :bprev<CR>
 
 "cntrl-s for saving
-map <C-s> :wa<CR>
+map <Leader>s :wa<CR>
 
 "for gf
 set suffixesadd+=.js,.jsx
