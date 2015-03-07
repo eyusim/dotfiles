@@ -52,3 +52,9 @@
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script
+[submodule "vim/bundle/vim-git-log"]
+	path = vim/bundle/vim-git-log
+	url = https://github.com/kablamo/vim-git-log
+[submodule "vim/bundle/vim-scala"]
+	path = vim/bundle/vim-scala
+	url = https://github.com/derekwyatt/vim-scala
